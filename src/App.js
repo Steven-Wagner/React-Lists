@@ -13,10 +13,11 @@ function App(props) {
           return <List 
             header={list.header} 
             Cards={list.cardIds.map(id => {
-              props.store.allCards.key = id;
-              return props.store.allCards[id];
+            const newCard = props.store.allCards[id];
+            newCard.id = id;
+            return newCard;
             })}
-            key={props.store.lists.id}>
+            key={list.id}>
           </List>
         })}  
         </div>

@@ -14,7 +14,7 @@ class List extends React.Component {
                     return (<Card 
                         title={card.title} 
                         content={card.content}
-                        key={card.key}>
+                        key={card.id}>
                     </Card>)
                 })}
             </div>
