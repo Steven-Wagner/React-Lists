@@ -14,10 +14,13 @@ class List extends React.Component {
                     return (<Card 
                         title={card.title} 
                         content={card.content}
-                        key={card.id}>
+                        key={card.id}
+                        id={card.id}
+                        onDeleteItem={this.props.onDeleteItem}>
                     </Card>)
                 })}
             </div>
+            <button onClick={()=>this.props.onAddCard(this.props.listId)}>Add a random card</button>
             </section>
         )
     } 
